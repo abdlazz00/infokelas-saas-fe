@@ -7,12 +7,16 @@ import ClassDetail from './pages/ClassDetail';
 import Schedule from './pages/Schedule';
 import SubjectMaterials from './pages/SubjectMaterials';
 import Announcements from './pages/Announcements';
+import { Toaster } from 'react-hot-toast';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
     <Router>
+      <Toaster position="top-center"/>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/classes" element={<MyClasses />} />
