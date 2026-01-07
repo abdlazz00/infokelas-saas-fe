@@ -87,12 +87,8 @@ export default function MyClasses() {
             <div className="flex-1 overflow-y-auto p-4 md:p-8 pb-24 md:pb-8">
                 <div className="max-w-6xl mx-auto page-enter">
                     
-                    {/* Tombol Gabung Kelas */}
-                    <div className="flex justify-end mb-6">
-                        <button onClick={() => setShowModal(true)} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 hover:border-brand-200 dark:hover:border-brand-900 font-bold py-2.5 px-5 rounded-xl shadow-sm transition flex items-center gap-2 active:scale-95">
-                            <i className="fa-solid fa-plus"></i> Gabung Kelas Baru
-                        </button>
-                    </div>
+                    {/* --- TOMBOL GABUNG KELAS DIHAPUS SEMENTARA --- */}
+                    {/* <div className="flex justify-end mb-6">...</div> */}
 
                     {/* Grid Kelas */}
                     {isLoading ? (
@@ -176,9 +172,8 @@ export default function MyClasses() {
                             </div>
                             <h3 className="text-xl font-bold text-slate-700 dark:text-white">Belum ada kelas</h3>
                             <p className="text-slate-500 dark:text-slate-400 text-sm mt-2 mb-6 max-w-xs mx-auto">Anda belum terdaftar di kelas manapun.</p>
-                            <button onClick={() => setShowModal(true)} className="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg shadow-brand-500/30 transition text-sm">
-                                Gabung Kelas Sekarang
-                            </button>
+                            {/* Tombol gabung kelas empty state juga saya hide sementara */}
+                            {/* <button onClick={() => setShowModal(true)} ... >Gabung Kelas Sekarang</button> */}
                         </div>
                     )}
                 </div>
@@ -228,9 +223,8 @@ export default function MyClasses() {
                 </div>
             )}
 
-            {/* --- MODAL RESULT SUKSES/GAGAL (BARU) --- */}
+            {/* --- MODAL RESULT SUKSES/GAGAL --- */}
             {resultModal.show && (
-                // z-[60] agar muncul di atas modal input (jika modal input masih terbuka/error)
                 <div className="fixed inset-0 z-[60] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 page-enter">
                     <div className="bg-white dark:bg-slate-900 w-full max-w-sm rounded-3xl shadow-2xl relative border border-gray-100 dark:border-slate-800 p-6 text-center">
                         

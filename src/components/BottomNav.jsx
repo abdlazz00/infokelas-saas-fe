@@ -56,11 +56,11 @@ export default function BottomNav() {
                 <span className="text-[10px] font-medium">Kelas</span>
             </button>
 
-            <div className="relative -top-6">
+            {/* <div className="relative -top-6">
                 <button onClick={() => navigate('/classes', { state: { openJoinModal: true } })} className="w-14 h-14 rounded-full bg-brand-600 hover:bg-brand-700 text-white flex items-center justify-center shadow-lg shadow-brand-500/40 active:scale-95 transition ring-4 ring-gray-50 dark:ring-slate-950">
                     <i className="fa-solid fa-plus text-xl"></i>
                 </button>
-            </div>
+            </div> */}
 
             <button onClick={() => navigate('/schedule')} className={`flex flex-col items-center gap-1 transition ${isActive('/schedule') ? 'text-brand-600 dark:text-brand-400' : 'text-slate-400 dark:text-slate-500 hover:text-brand-600'}`}>
                 <i className="fa-regular fa-calendar-days text-xl mb-0.5"></i>
